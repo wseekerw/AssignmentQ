@@ -1,0 +1,126 @@
+<div class="container">
+  <h2>Post Details</h2>
+  <a href="javascript:void(0)" (click)="viewPosts()">Back to posts</a>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 posts pb-3">
+      <div class="post-detail">
+        <div class="row">
+          <div class="col">
+            <span>Title</span>
+            <p>{{ post?.title }}</p>
+          </div>
+
+          <div class="col">
+            <span>Id</span>
+            <p>{{ post?.id }}</p>
+          </div>
+        </div>
+
+        <span>Body</span>
+        <p>{{ post?.body }}</p>
+
+        <hr />
+        <span>User Data</span>
+        <br />
+        <br />
+
+        <div class="row">
+          <div class="col">
+            <span>Name</span>
+            <p>
+              {{ user?.name }}
+            </p>
+          </div>
+
+          <div class="col">
+            <span>Username</span>
+            <p>
+              {{ user?.username }}
+            </p>
+          </div>
+
+          <div class="col">
+            <span>Email</span>
+            <p>
+              {{ user?.email }}
+            </p>
+          </div>
+
+          <div class="col">
+            <span>Phone</span>
+            <p>
+              {{ user?.phone }}
+            </p>
+          </div>
+
+          <div class="col">
+            <span>Website</span>
+            <p>
+              {{ user?.website }}
+            </p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col">
+            <span>Address</span>
+            <p>{{ user?.address?.street }}</p>
+            <p>{{ user?.address?.suite }}</p>
+            <p>{{ user?.address?.city }}</p>
+            <p>{{ user?.address?.zipcode }}</p>
+          </div>
+          <div class="col">
+            <span>Company</span>
+            <p>{{ user?.company?.name }}</p>
+            <p>
+              {{ user?.company?.catchPhrase }}
+            </p>
+            <p>{{ user?.company?.bs }}</p>
+          </div>
+        </div>
+      </div>
+
+      <a
+        [hidden]="post?.showComments"
+        href="javascript:void(0)"
+        (click)="toggleComments(post!)"
+        class="mb-4"
+        >Show comments</a
+      >
+
+      <a
+        [hidden]="!post?.showComments"
+        href="javascript:void(0)"
+        (click)="toggleComments(post!)"
+        class="mb-4"
+        >Hide comments</a
+      >
+
+      <hr [hidden]="!post?.showComments" />
+      <div [hidden]="!post?.showComments" class="row">
+        <span>Comments</span>
+        <br />
+        <br />
+        <div *ngFor="let comment of comments" class="col-12">
+          <div class="row">
+            <div class="col">
+              <span>Name</span>
+              <p>{{ comment.name }}</p>
+            </div>
+            <div class="col">
+              <span>postId</span>
+              <p>{{ comment.postId }}</p>
+            </div>
+          </div>
+
+          <span>Comment</span>
+          <p>{{ comment.body }}</p>
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
