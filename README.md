@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Recommended versions of toolset for this project:
 
-- Node.js version 14.18.0 LTS
+- Node.js version 14.18.0 LTS or newer
 
 Optional: https://github.com/nvm-sh/nvm for managing multiple versions of node
 
