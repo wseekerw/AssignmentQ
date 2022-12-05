@@ -1,27 +1,43 @@
-# Assignment
+# Assigment project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Recommended versions of toolset for this project:
 
-## Code scaffolding
+- Node.js version 14.18.0 LTS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Optional: https://github.com/nvm-sh/nvm for managing multiple versions of node
 
-## Build
+- Angular CLI 11.0.7 version
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Get the application from repository
 
-## Running unit tests
+git init
+git remote add origin https://github.com/wseekerw/AssignmentQ
+git fetch --all
+git pull origin master
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+or
 
-## Running end-to-end tests
+git clone https://github.com/wseekerw/AssignmentQ
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Start the application
 
-## Further help
+npm install -- install required modules
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+--------------------------------------------
+
+npm start 
+
+or 
+
+ng serve -- start the application
+
+--------------------------------------------
+
+open your browser on http://localhost:4200/
+
+
+
