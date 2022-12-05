@@ -15,8 +15,11 @@ Optional: https://github.com/nvm-sh/nvm for managing multiple versions of node
 ## Get the application from repository
 
 git init
+
 git remote add origin https://github.com/wseekerw/AssignmentQ
+
 git fetch --all
+
 git pull origin master
 
 or
