@@ -32,57 +32,11 @@
           <div class="col">
             <span>Name</span>
             <p>
-              {{ (post.userId | referenceName : users!).name }}
-            </p>
-          </div>
-
-          <div class="col">
-            <span>Username</span>
-            <p>
-              {{ (post.userId | referenceName : users!).username }}
-            </p>
-          </div>
-
-          <div class="col">
-            <span>Email</span>
-            <p>
-              {{ (post.userId | referenceName : users!).email }}
-            </p>
-          </div>
-
-          <div class="col">
-            <span>Phone</span>
-            <p>
-              {{ (post.userId | referenceName : users!).phone }}
-            </p>
-          </div>
-
-          <div class="col">
-            <span>Website</span>
-            <p>
-              {{ (post.userId | referenceName : users!).website }}
+              {{ post.userId | referenceName : users! }}
             </p>
           </div>
         </div>
         <hr />
-
-        <div class="row">
-          <div class="col">
-            <span>Address</span>
-            <p>{{ (post.userId | referenceName : users!).address?.street }}</p>
-            <p>{{ (post.userId | referenceName : users!).address?.suite }}</p>
-            <p>{{ (post.userId | referenceName : users!).address?.city }}</p>
-            <p>{{ (post.userId | referenceName : users!).address?.zipcode }}</p>
-          </div>
-          <div class="col">
-            <span>Company</span>
-            <p>{{ (post.userId | referenceName : users!).company?.name }}</p>
-            <p>
-              {{ (post.userId | referenceName : users!).company?.catchPhrase }}
-            </p>
-            <p>{{ (post.userId | referenceName : users!).company?.bs }}</p>
-          </div>
-        </div>
       </div>
 
       <a
